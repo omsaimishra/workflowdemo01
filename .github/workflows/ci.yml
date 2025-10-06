@@ -23,6 +23,7 @@ jobs:
         with:
           node-version: "20"
       - name: install dependencies
-        run: npm install      
+        run: npm install
+        working-directory: workflowhello      
       - name: build react
         run: npm run build
