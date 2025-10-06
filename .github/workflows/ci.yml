@@ -15,6 +15,7 @@ jobs:
         run: echo "Meanrev"
   job2:
     runs-on: ubuntu-latest
+    working-directory: workflowhello  
     steps:
       - name: checkout code 
         uses: actions/checkout@v4
@@ -23,7 +24,6 @@ jobs:
         with:
           node-version: "20"
       - name: install dependencies
-        run: npm install
-        working-directory: workflowhello      
+        run: npm install    
       - name: build react
         run: npm run build
