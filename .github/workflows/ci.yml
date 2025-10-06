@@ -15,7 +15,9 @@ jobs:
         run: echo "Meanrev"
   job2:
     runs-on: ubuntu-latest
-    working-directory: workflowhello  
+    defaults:
+      run:
+        working-directory: workflowhello  
     steps:
       - name: checkout code 
         uses: actions/checkout@v4
