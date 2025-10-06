@@ -1,0 +1,14 @@
+name: ci
+on:
+  Push:
+    branches: [main]
+  pull_request: [main]
+    branches: [main]
+  schedule:
+    - cron: "* * * 0 0"
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo name
+        run: echo "Meanrev"
